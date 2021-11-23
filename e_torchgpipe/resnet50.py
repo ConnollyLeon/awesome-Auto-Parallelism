@@ -1,6 +1,8 @@
 '''
 An example of using torchgpipe.
 
+TODO: This file is currently not executing correctly due to multiple submodule exists.
+
 torchgpipe only support model implemented by nn.Sequential.
 
 '''
