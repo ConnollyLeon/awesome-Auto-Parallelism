@@ -13,7 +13,7 @@ export DATA_PATH=${DATA_PATH}
 
 rm -rf tensor_opt
 mkdir tensor_opt
-cp ./resnet50_distributed_training_gpu.py ./resnet.py ./tensor_opt
+cp ./tensor_opt.py ./resnet.py ./tensor_opt
 cd ./tensor_opt
 echo "start training"
 mpirun -n 2 pytest -s -v ./tensor_opt.py > train.log 2>&1 &

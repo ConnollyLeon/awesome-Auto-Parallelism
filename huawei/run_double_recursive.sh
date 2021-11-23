@@ -13,7 +13,7 @@ export DATA_PATH=${DATA_PATH}
 
 rm -rf double_recursive
 mkdir double_recursive
-cp ./double_recursive ./resnet.py ./double_recursive
-cd ./tensor_opt
+cp ./double_recursive.py ./resnet.py ./double_recursive
+cd ./double_recursive
 echo "start training"
-mpirun -n 2 pytest -s -v ./double_recursive > train.log 2>&1 &
+mpirun -n 2 pytest -s -v ./double_recursive.py > train.log 2>&1 &
