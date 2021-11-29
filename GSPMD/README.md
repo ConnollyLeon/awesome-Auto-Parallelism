@@ -20,7 +20,7 @@ GSPMD defines three types of sharding:
 - Tiled: Each device occupies the corresponding tile in the data tensor, without data duplication.
 - Partially tiled. Replicated in subgroups. Each subgroup has a different subset of data.
 
-!(Examples)[../Image/GSPMD/1.png]
+![Examples](../Image/GSPMD/1.png)
 
 mesh_split(tensor, device_mesh, dims_mapping) is the primary API that GSPMD provides for users.
 
