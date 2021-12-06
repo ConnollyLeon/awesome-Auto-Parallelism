@@ -1,3 +1,8 @@
+# Code
+
+The implementation code is in tensorflow/compiler/xla.
+An example can be found [here](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/xla/experimental/xla_sharding/xla_sharding.py)
+
 # Methods Summary
 
 ## GSPMD
