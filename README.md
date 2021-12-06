@@ -41,7 +41,7 @@ some difference in executing schedule.
 |[DAPPLE](https://github.com/AlibabaPAI/DAPPLE) | An Efficient Pipelined Data Parallel Approach for Training Large Model. Succeed from GPipe | Alibaba | [arxiv](https://arxiv.org/pdf/2007.01045.pdf) | DAPPLE | 2020 on arxiv; PPoPP 21 | Dynamic Programming
 |[Chimera](https://github.com/Shigangli/Chimera) | Efficiently training large-scale neural networks with bidirectional pipelines | Department of Computer Science, ETH Zurich Switzerland | [dl.acm](https://dl.acm.org/doi/pdf/10.1145/3458817.3476145) | PyTorch | SC 2021 | Performance model with brute force
 |[RaNNC](https://github.com/nict-wisdom/rannc/tree/main) | RaNNC is an automatic parallelization middleware used to train very large-scale neural networks. | DIRECT and University of Tokyo | [arxiv](http://arxiv.org/abs/2103.16063) | PyTorch | IPDPS 2021 | dynamic programming
-|[HeterPS](https://github.com/PaddlePaddle/Paddle/tree/develop/paddle/fluid/framework/fleet/heter_ps)]| distributed deep learning with RL based scheduling in heterogeneous environment. | Baidu |  [arxiv](https://arxiv.org/pdf/2111.10635.pdf) | Paddle | 2021 | Reinforce learning based
+|[HeterPS](https://github.com/PaddlePaddle/Paddle/tree/develop/paddle/fluid/framework/fleet/heter_ps)| distributed deep learning with RL based scheduling in heterogeneous environment. | Baidu |  [arxiv](https://arxiv.org/pdf/2111.10635.pdf) | Paddle | 2021 | Reinforce learning based
 |
 
 ## Data Parallelism + Model Parallelism (or Tensor Parallelism):
