@@ -7,7 +7,7 @@ Currently, it is implemented by python. So the efficiency may not be high enough
 ## Advantages:
 
 1. PaSE support brute-force search and dynamic-programming based search.
-2. Its complexity is O（|V|^2 K^(M+1)）, where V is the num of vertices, K is the configurable strategies of a single
+2. Its complexity is O(|V|^2 K^(M+1)), where V is the num of vertices, K is the configurable strategies of a single
    layer, M is the maximum num of dependent set.
 
 ## Limitations:

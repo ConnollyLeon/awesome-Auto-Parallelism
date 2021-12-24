@@ -1,8 +1,9 @@
 # AutoMap
 
-This method is produced by **DeepMind**.
+This method is proposed by **DeepMind**.
 
-This rewrite engine is implemented in MLIR with an XLA backend, and a python API in JAX.
+This rewrite engine is implemented in MLIR with an XLA backend, and a python API in JAX. Rewrite sequences are evaluated
+through compiler-internal cost models (estimating peak memory, runtime and communication).
 
 ![1](../Image/Automap/1.png)
 
