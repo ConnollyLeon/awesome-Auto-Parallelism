@@ -77,7 +77,7 @@ I classify parallelism methods according to their partition ways.
 |[DistIR](https://github.com/microsoft/dist-ir) | Horizontal TP. An intermediate representation and simulator for efficient neural network distribution | Stanford University & Microsoft Fiddle| [arxiv](https://arxiv.org/abs/2111.05426) | PyTorch | MLSys 2021 | Grid-Search Simulator
 |Neo | A software-hardware co-designed system for high-performance distributed training of large-scale DLRM.  | Facebook | [arxiv](https://export.arxiv.org/pdf/2104.05158.pdf) | PyTorch | 2021 | 1. Greedy 2. Karmarker-Karp Algorithm
 |Adaptive Paddle| Elastic training, fault tolerant, Cost-model based Sharding propagation |Baidu | [arxiv](https://arxiv.org/pdf/2112.02752.pdf) | Paddle | 2021 | Cost model based. Details un-given.
-|Alpa | Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning | UC Berkley, Google, etc. | [arxiv](https://arxiv.org/pdf/2201.12023.pdf) | Jax, XLA | 2022 | Integer Linear for Intra, Dynamic programming for inter
+|[Alpa](https://github.com/alpa-projects/alpa) | Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning | UC Berkley, Google, etc. | [arxiv](https://arxiv.org/pdf/2201.12023.pdf) | Jax, XLA | 2022 | Integer Linear for Intra, Dynamic programming for inter
 
 ## Other Interesting automatic work
 
