@@ -1,5 +1,6 @@
 |Time |  Name  | Organization | Model size | Dataset size | Devices| Backbone| paper | Parallel Methods | Optimizer |
 | ---|--- | --- | --- | ---  | --- | --- | --- | --- |---|
+|2022.4.5 | PaLM | Google | 540 B | 780 B tokens | 6144 TPU v4 | Singleton | [arxiv](https://arxiv.org/pdf/2204.02311.pdf) | Pathways, DP=2 | Adafactor 
 |2022.2.4 | Megatron-Turing NLG | Microsoft & Nvidia | 530 B |339 B tokens | 560 80GB A100| Singleton| [arxiv](https://arxiv.org/pdf/2201.11990.pdf) |ZeRO-D=2, T=8, P=35| Adam 1.6e-4, beta1=0.9, beta2=0.95
 |2021.12.9 | GLaM  | Google Brain | 1.162T | 1.6 T tokens | [1024 TPUv3?](\textsc{https://ai.googleblog.com/2021/12/general-and-scalable-parallelization.html}) |GShard MoE Transformer | [blog](https://ai.googleblog.com/2021/12/more-efficient-in-context-learnning-with.html) | GShard, 64 experts per MoE layer with 32 MoE layers in total | Unknown
 |2021.12.8 |Gopher | Google DeepMind | 280 B | 5GB?? | 4096 16 GB TPUv3 | Singleton | [deepmind](https://storage.googleapis.com/deepmind-media/research/language-research/Training%20Gopher.pdf) | T,D,P ZeRO-stage1. details ungiven. Maybe given by [Automap](https://arxiv.org/pdf/2112.02958.pdf)| Adam in pre-traininig, adafactor in fine-tuning
@@ -11,6 +12,12 @@
 |2021.4.26 | Pangu-alpha | Huawei and PengCheng Lab | 207 B | 1.1 TB | 2048 Ascend 910 NPU| Singleton | [arxiv](https://arxiv.org/pdf/2104.12369.pdf) | T=8, P=16, ZeRO-Stage1-D=16 | Adam 2e-4, beta1=0.9, beta2=0.95
 |2020.5 | GPT3 | Open-AI | 175 B | 570 GB | 10000 V100 GPUs? | Singleton |[arxiv](https://arxiv.org/pdf/2005.14165.pdf) | Model and Data parallelism, details unknown| 0.6e10-4, beta1=0.9, beta2=0.95
 
+## PaLM
+First model that uses Pathways to train.
+
+| layers | hidden_size | num_heads | FFN_size  | seq_length 
+| ------ | ----------- | --------- | --------- |  -----|
+|   118   |    18432    |    48    |  73728   | 2048|
 
 ## Megatron-Turing NLG
 

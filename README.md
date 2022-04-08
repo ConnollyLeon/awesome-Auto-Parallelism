@@ -40,7 +40,7 @@ I classify parallelism methods according to their partition ways.
 | Spotlight| Model device placement as a Markov decision process (MDP). | University of Toronto | [mlr.press](http://proceedings.mlr.press/v80/gao18a/gao18a.pdf) | Unknown|PMLR 80, 2018 | Reinforce LSTM
 | Placeto | Looks like Spotlight with MDP, but have different Policy. | MIT |[nips](https://proceedings.neurips.cc/paper/2019/file/71560ce98c8250ce57a6a970c9991a5f-Paper.pdf) | Tensorflow | NIPS 2019 |  Reinforce
 |[REGAL](https://github.com/deepmind/deepmind-research/tree/master/regal)|a deep reinforcement learning approach to minimizing the execution cost of neural network computation graphs in an optimizing compiler. |Google|[openreview](https://openreview.net/pdf?id=rkxDoJBYPB) | Unknown |ICLR 2020 |RL with Genetic Algorithm
-|[PipeDream](https://github.com/msr-fiddle/pipedream) |This repository contains the source code implementation of PipeDream and PipeDream-2BW | Microsoft Fiddle| [arxiv](https://arxiv.org/pdf/1806.03377.pdf), | Fiddle | 2018 on arxiv, SOSP 2019 | Dynamic Programming with Profile
+|[PipeDream](https://github.com/msr-fiddle/pipedream) |This repository contains the source code implementation of PipeDream and PipeDream-2BW | Microsoft Fiddle| [arxiv](https://arxiv.org/pdf/1806.03377.pdf), | PyTorch | 2018 on arxiv, SOSP 2019 | Dynamic Programming with Profile
 |PipeDream-2BW | See above one | Microsoft |[arxiv](https://arxiv.org/pdf/2006.09503.pdf), [mlr.press](http://proceedings.mlr.press/v139/narayanan21a/narayanan21a.pdf)  | PyTorch | PMLR 139, 2021 | Dynamic Programming with Profile
 |[DNN-partitioning](https://github.com/msr-fiddle/dnn-partitioning)| published at NeurIPS 2020. | Microsoft Fiddle| [arxiv](https://arxiv.org/pdf/2006.16423.pdf) | proof-of-concept implementation | NIPS 2020 |Dynamic Programming and Integer Programming
 |HetPipe| Enabling Large DNN Training on (Whimpy) Heterogeneous GPU Clusters through Integration of Pipelined Model Parallelism and Data Parallelism | UNIST | [usenix](https://www.usenix.org/system/files/atc20-park.pdf) | PyTorch (not open sourced) | USENIX 2020 | use CPLEX to solve linear programming problem
@@ -96,10 +96,10 @@ I classify parallelism methods according to their partition ways.
 | ColocRL | Reinforcement | MP | 2017 | 
 | HDP | Reinforcement | MP | 2018 |  
 | GDP | Reinforcement | MP | 2019 |  
+| REGAL | Reinforcement | MP | 2020 |  
 | TAPP | Reinforcement | DP+PP | 2021 |
 | Spotlight | Reinforcement | DP+MP | 2018 |
 | Placeto | Reinforcement | DP+MP | 2019 |  
-| REGAL | Reinforcement | DP+MP | 2020 |  
 | HeterPS | Reinforcement | DP+PP | 2021 | 
 | AutoMap | Deep Learning to predict rank | DP+TP | 2021 | 
 | Auto-MAP | Reinforcement | DP or TP or PP | 2020 | 
@@ -111,14 +111,14 @@ I classify parallelism methods according to their partition ways.
 | Name | Method Type | Parallelism | Year |
 | --- | --- | --- | ---  |
 | Pesto | integer linear | MP | 2021 | 
-| vpipe | integer linear | PP | 2022 | 
+| vpipe | SRP algorithm + KL (DP) | PP | 2022 | 
 | PipeDream | dynamic programming | DP+PP | 2019 | 
 | DNN-partitioning | dynamic programming + integer programming | DP+PP | 2020 |
 | PipeDream-2BW | dynamic programming | DP+PP | 2021 |
 | HetPipe | dynamic programming | DP+PP | 2020 |   
 | DAPPLE | dynamic programming | DP+PP | 2021 | 
 | PipeTransformer | dynamic programming | DP+PP | 2021 | 
-| Chimera | dynamic programming | DP+PP | 2021 | 
+| Chimera | Grid-Search| DP+PP | 2021 | 
 | RaNNC | dynamic programming | DP+PP | 2021 |  
 | FTPipe | Multiprocessor scheduling problem with profiling | DP+PP | 2021 |
 | OptCNN | dynamic programming | DP+TP | 2018 | 
@@ -131,7 +131,8 @@ I classify parallelism methods according to their partition ways.
 | Piper | two-level dynamic programming | DP+TP+PP | 2021 |
 | GSPMD | heuristic-propagation | DP+TP+PP | 2021 | 
 | DistIR | grid search | DP+TP+PP | 2021 | 
-| Neo | Karmarker-karp algorithm | DP+TP+PP | 2021 |
+| Neo | Greedy + Karmarker-karp algorithm | DP+TP+PP | 2021 |
+| Alpa | Integer programming + Dynamic Programming | DP+TP+PP | 2022 |
 
 ---
 
