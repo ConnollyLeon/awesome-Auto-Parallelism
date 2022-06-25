@@ -1,6 +1,6 @@
 |Time |  Name  | Organization | Model size | Dataset size | Devices| Backbone| paper | Parallel Methods | Optimizer |
 | ---|--- | --- | --- | ---  | --- | --- | --- | --- |---|
-|2022.4.5 | PaLM | Google | 540 B | 780 B tokens | 6144 TPU v4 | Singleton | [arxiv](https://arxiv.org/pdf/2204.02311.pdf) | Pathways, DP=2 | Adafactor 
+|2022.4.5 | PaLM | Google | 540 B | 780 B tokens | 2x TPU v4 pod(2*3072)| Singleton | [arxiv](https://arxiv.org/pdf/2204.02311.pdf) | Pathways, inter-pod: DP=2。intra-pod: DP=256,TP=12 | Adafactor 
 |2022.2.4 | Megatron-Turing NLG | Microsoft & Nvidia | 530 B |339 B tokens | 560 80GB A100| Singleton| [arxiv](https://arxiv.org/pdf/2201.11990.pdf) |ZeRO-D=2, T=8, P=35| Adam 1.6e-4, beta1=0.9, beta2=0.95
 |2021.12.9 | GLaM  | Google Brain | 1.162T | 1.6 T tokens | [1024 TPUv3?](\textsc{https://ai.googleblog.com/2021/12/general-and-scalable-parallelization.html}) |GShard MoE Transformer | [blog](https://ai.googleblog.com/2021/12/more-efficient-in-context-learnning-with.html) | GShard, 64 experts per MoE layer with 32 MoE layers in total | Unknown
 |2021.12.8 |Gopher | Google DeepMind | 280 B | 5GB?? | 4096 16 GB TPUv3 | Singleton | [deepmind](https://storage.googleapis.com/deepmind-media/research/language-research/Training%20Gopher.pdf) | T,D,P ZeRO-stage1. details ungiven. Maybe given by [Automap](https://arxiv.org/pdf/2112.02958.pdf)| Adam in pre-traininig, adafactor in fine-tuning
